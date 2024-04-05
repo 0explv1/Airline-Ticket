@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qilin Airlines</title>
+</head>
+
+<body>
+    <h1>Upcoming Flights</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Airline</th>
+                <th>Flight Number</th>
+                <th>Departure Airport</th>
+                <th>Departure Time</th>
+                <th>Arrival Airport</th>
+                <th>Arrival Time</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Plane ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for f in flight %}
+            <tr>
+                <td>{{ f.airline_num }}</td>
+                <td>{{ f.flight_num }}</td>
+                <td>{{ f.departure_arpt }}</td>
+                <td>{{ f.departure_time }}</td>
+                <td>{{ f.arrival_arpt }}</td>
+                <td>{{ f.arrival_time }}</td>
+                <td>{{ f.price }}</td>
+                <td>{{ f.status }}</td>
+                <td>{{ f.plane_id }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
